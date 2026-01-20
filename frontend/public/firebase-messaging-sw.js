@@ -3,12 +3,12 @@ importScripts('https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js'
 importScripts('https://www.gstatic.com/firebasejs/9.23.0/firebase-messaging-compat.js');
 
 firebase.initializeApp({
-  apiKey:"AIzaSyAAzlq3BQXNRZAZGH2I9wjFFgCjDr3r4vI",
-  authDomain: "meditracker-prod.firebaseapp.com",
-  projectId: "meditracker-prod",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
   storageBucket: "meditracker-prod.firebasestorage.app",
-  messagingSenderId:"374246334492" ,
-  appId: "1:374246334492:web:d77a86078b5637b8883fd9"
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 });
 
 const messaging = firebase.messaging();
