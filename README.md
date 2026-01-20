@@ -48,9 +48,9 @@ MediTracker is a **full-stack health management application** designed to help u
 - **AI Assistant:** Custom AI-powered chatbot  
 - **Analytics:** Custom dashboards  
 
----
 
 ## 📁 Folder Structure
+
 Meditracker/
 ├── backend/
 │ ├── src/
@@ -143,9 +143,8 @@ Meditracker/
 │ │ └── firebase.js
 │ ├── package.json
 │ └── package-lock.json
-
-
 ---
+
 
 ## 🚀 Getting Started
 
@@ -171,24 +170,24 @@ Meditracker/
 ### Environment Variables
 ## Backend.env
 
--MONGO_URI=your_mongodb_connection_string
--JWT_SECRET=your_jwt_secret
--EMAIL_USER=your_email
--EMAIL_PASS=your_email_password
--OPENAI_API_KEY=your_openai_api_key
--VITE_FIREBASE_API_KEY=your_api_key
--VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
--VITE_FIREBASE_PROJECT_ID=your_project_id
--VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
--VITE_FIREBASE_APP_ID=your_app_id
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+EMAIL_USER=your_email
+EMAIL_PASS=your_email_password
+OPENAI_API_KEY=your_openai_api_key
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
 
 ## Frontend.env
 
--VITE_FIREBASE_API_KEY=your_api_key
--VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
--VITE_FIREBASE_PROJECT_ID=your_project_id
--VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
--VITE_FIREBASE_APP_ID=your_app_id
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
 
 
 
