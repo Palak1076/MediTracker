@@ -52,6 +52,7 @@ MediTracker is a **full-stack health management application** designed to help u
 ## 📁 Folder Structure
 
 Meditracker/
+Meditracker/
 ├── backend/
 │ ├── src/
 │ │ ├── config/
@@ -155,17 +156,17 @@ Meditracker/
 
 ### Backend Setup
 
--cd backend
--npm install
--cp .env.example .env    # Add your environment variables
--npm run dev
+cd backend
+npm install
+cp .env.example .env    # Add your environment variables
+npm run dev
 
 ### Frontend Setup
 
--cd frontend
--npm install
--cp .env.example .env    # Add Firebase & API keys
--npm run dev
+cd frontend
+npm install
+cp .env.example .env    # Add Firebase & API keys
+npm run dev
 
 ### Environment Variables
 ## Backend.env
