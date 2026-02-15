@@ -27,14 +27,7 @@ const errorHandler = require('./middleware/errorHandler');
 const { auth, firebaseAuth } = require('./middleware/auth');
 const userRoutes=require('./routes/userRoutes');
 const app = express();
-// const allowedOrigins = [
-//   'http://localhost:3000',
-//   'http://localhost:5173',
-//   'http://localhost:5175',
-//   'http://127.0.0.1:3000',
-//   'http://127.0.0.1:5173',
-//   'http://127.0.0.1:5175'
-// ];
+
 app.use(cors({
   origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
   credentials: true,
@@ -42,7 +35,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type','Authorization']
 }));
 
-// Optional: handle preflight
+
 app.options('*', cors());
 app.use((req, res, next) => {
   res.setHeader("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
@@ -52,10 +45,10 @@ app.use((req, res, next) => {
 
 
 CronJobManager.initialize();
-MissedDoseDetector.init(); // If it has an init method
+MissedDoseDetector.init(); 
 
 app.use(helmet({
-  contentSecurityPolicy: false // 🔥 disable CSP for API (important)
+  contentSecurityPolicy: false 
 }));
 // Rate limiting
 const limiter = rateLimit({
@@ -72,35 +65,7 @@ const limiter = rateLimit({
 });
 app.use('/api/auth', limiter);
 
-// CORS configuration - FIX THIS SECTION
 
-
-// app.use(cors({
-//   origin: function (origin, callback) {
-//     // origin can be undefined (curl, mobile, etc.)
-//     if (!origin) return callback(null, true);
-
-//     if (allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       console.log('Blocked by CORS:', origin);
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   },
-//   credentials: true,
-//   methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
-//   allowedHeaders: ['Content-Type','Authorization','X-Requested-With','Accept'],
-//   exposedHeaders: ['Content-Range','X-Content-Range']
-// }));
-
-// // Optional: handle preflight explicitly
-// app.options('*', cors({
-//   origin: allowedOrigins,
-//   credentials: true
-// }));
-
-
-// Body parsing middleware
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
